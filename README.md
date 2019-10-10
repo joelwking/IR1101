@@ -17,31 +17,8 @@ https://www.cisco.com/c/en/us/support/docs/routers/1101-industrial-integrated-se
 Reference: Instructions to avoid the "Docker Repository Does Not Have a Release File on Running apt-get update on Ubuntu" issue.
 https://stackoverflow.com/questions/41133455/docker-repository-does-not-have-a-release-file-on-running-apt-get-update-on-ubun/45881841
 
+The Vagrantfile contains the commands to install Docker, simply test.
 
-```
-sudo apt-get remove docker docker-engine docker.io
-
-sudo apt-get update
-
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-sudo apt-key fingerprint 0EBFCD88
-
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-xenial \
-stable"
-
-sudo apt-get update
-
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-```
-
-Add your userid to the group
-```
-sudo usermod -a -G docker vagrant
-newgrp docker
 ```
 Test the Docker installation
 ```

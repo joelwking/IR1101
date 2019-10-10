@@ -32,5 +32,15 @@ Vagrant.configure(2) do |config|
   sudo apt-get install software-properties-common -y
   sudo apt-add-repository --yes --update ppa:ansible/ansible
   sudo apt-get install ansible -y
+  sudo apt-get remove docker docker-engine docker.io
+  sudo apt-get update
+  sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo apt-key fingerprint 0EBFCD88
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+  sudo apt-get update
+  sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+  sudo usermod -a -G docker vagrant
+  newgrp docker 
   SHELL
 end
