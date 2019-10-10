@@ -41,7 +41,7 @@ The IOx package is licensed software which requireds a Cisco login and contract!
 Assuming you have downloaded and saved the file, copy the file to the VM:
 
 ```bash
- scp administrator@192.168.56.104:/tmp/ioxclient_1.9.2.0_linux_amd64.tar.gz ioxclient_1.9.2.0_linux_amd64.tar.gz
+scp administrator@192.168.56.104:/tmp/ioxclient_1.9.2.0_linux_amd64.tar.gz ioxclient_1.9.2.0_linux_amd64.tar.gz
 ```
 Expand the file:
 ```bash
@@ -63,7 +63,7 @@ https://www.cisco.com/c/en/us/support/docs/routers/1101-industrial-integrated-se
 ```bash
 sudo apt-get install qemu-user qemu-user-static
 ```
-Verify this file exists: ` ls -al /usr/bin/qemu-*static | grep aarch64`
+Verify this file exists: `ls -al /usr/bin/qemu-*static | grep aarch64`
 
 ### Test if an aarch64/ARV64v8 Container Runs on x86 Linux Machine
 Review instructions in Part 1: Step 4 of:
